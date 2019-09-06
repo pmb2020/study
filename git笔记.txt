@@ -8,3 +8,10 @@ git config --global user.email pmb2020@163.com
 
 3、查看配置信息
 git config --list
+
+4、git最基本操作
+git init name        (初始化一个Git仓库)
+git add  文件名      (把文件添加到仓库，只是添加到暂存区)
+git commit -m "说明" (把文件提交到仓库) 
+git push origin master(把本地仓库推送到远程github仓库)
+
