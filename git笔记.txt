@@ -16,6 +16,34 @@ git commit -m "说明" (把文件提交到仓库)
 git push origin master(把本地仓库推送到远程github仓库)
 说明:push之前需要先使用pull把本地代码更新到最新
 
+git remote --v   查看git远程仓库地址
+git remote add crmservice git@192.168.14.12:kawork/crmservice.git
+git fetch crmservice master 拉取代码到本地，不合并
+git merge crmservice/master  合并代码
+
+5、误删重新拉取msster
+git checkout feature_hangzhou
+
+git branch -D master
+
+git fetch crmservice master:master
+
+git checkout master
+
+git push -f origin master
+
+6、上线（有分支）
+git checkout master
+
+git pull crmservice master
+
+git merge feature_chengdu
+
+git push origin master
+
+
+
+
 推送代码到远程仓库
 
 常见冲突解决方法
