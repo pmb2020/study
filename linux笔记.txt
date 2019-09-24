@@ -19,3 +19,5 @@
       "find / -name 文件"         从/目录搜索文件和目录
       "find / -user user1"        搜索属于用户user1的文件和目录
       "find / -name \*.php"       搜索后缀为php的文件
+      "ps -ef|grep ngnix"         查看进程
+      "ps -aux|grep ngnix"        查看进程

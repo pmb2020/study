@@ -1,0 +1,4 @@
+show databases; 查看当前数据库
+create database test;创建数据库
+use test;使用数据库
+show tables; 查看有哪些表

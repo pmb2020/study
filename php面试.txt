@@ -1,5 +1,16 @@
-PHP面试准备
+﻿PHP面试准备
+
 一、PHP基础
+
+1、PHP为空的值
+2、小笔记
+echo true；结果为1，false结果为空
+
+
+
 二、MySQL基础
+
+
+
 三、Linux基础
 

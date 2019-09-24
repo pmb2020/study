@@ -1,4 +1,4 @@
-git使用小笔记
+﻿git使用小笔记
 1、测试ssh连接
 ssh -T git@github.com
 
@@ -8,6 +8,8 @@ git config --global user.email pmb2020@163.com
 
 3、查看配置信息
 git config --list
+
+ssh-keygen -t rsa -C "youremail@example.com"     SSH Key生成
 
 4、git最基本操作
 git init name        (初始化一个Git仓库)
@@ -48,6 +50,6 @@ git push origin master
 
 常见冲突解决方法
 1、让本地代码变得和远程仓库一样
-git fetch -all      //拉取代码到本地不合并
+git fetch --all      //拉取代码到本地不合并
 git reset --hard origin/master  //把HEAD指向最新下载的版本
 
