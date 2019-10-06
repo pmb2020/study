@@ -1,4 +1,63 @@
+登录mysql：windows下进入mysql/bin目录，命令mysql -hlocalhost -uroot -p或者mysql -u root -p
+
 show databases; 查看当前数据库
+
 create database test;创建数据库
+
+drop database test;删除数据库
+
+show databases like 'mysql';查找mysql数据库(完全匹配)
+show databases like '%mysql%';查找mysql数据库(匹配mysql)
+
 use test;使用数据库
+
 show tables; 查看有哪些表
+
+创建test2数据表
+create table test2
+(
+id int(11),
+name char(5)
+);
+drop table test2; 删除表
+
+修改数据表
+1、添加新的字段
+alter table test add name char(50);  //在test表添加name字段
+alter table test add name char(50) first;  //添加在第一列
+alter table test add name char(50) after id;  //添加的字段在id之后
+
+2、修改表字段
+ALTER TABLE <表名> MODIFY <字段名> <数据类型>
+alter table test modify name char(10); //将name字段类型修改为char(10)
+
+ALTER TABLE <表名> CHANGE <旧字段名> <新字段名> <新数据类型>；
+alter table test change name name8 int; //将name字段名修改为name8并且类型为Int
+
+ALTER TABLE <旧表名> RENAME [TO] <新表名>；
+alter table test rename test1; //将tets表名修改为test1
+3、删除字段
+ALTER TABLE <表名> DROP <字段名>；
+alter table test drop name; //删除name字段
+
+查看表结构
+describe(可简写DESC) test2
+
+显示创建表的sql语句
+SHOW CREATE TABLE test2\G
+
+查询去重
+SELECT DISTINCT age FROM test;
+
+设置别名
+SELECT stu.name,stu.height FROM tb_students_info AS stu;
+SELECT name AS student_name, age AS student_age FROM tb_students_info;
+
+limit......
+
+可以根据以下的原则来选择 MySQL 存储引擎：
+
+如果要提供提交、回滚和恢复的事务安全（ACID 兼容）能力，并要求实现并发控制，InnoDB 是一个很好的选择。
+如果数据表主要用来插入和查询记录，则 MyISAM 引擎提供较高的处理效率。
+如果只是临时存放数据，数据量不大，并且不需要较高的数据安全性，可以选择将数据保存在内存的 MEMORY 引擎中，MySQL 中使用该引擎作为临时表，存放查询的中间结果。
+如果只有 INSERT 和 SELECT 操作，可以选择Archive 引擎，Archive 存储引擎支持高并发的插入操作，但是本身并不是事务安全的。Archive 存储引擎非常适合存储归档数据，如记录日志信息可以使用 Archive 引擎。
