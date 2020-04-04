@@ -53,3 +53,5 @@ git push origin master
 git fetch --all      //拉取代码到本地不合并
 git reset --hard origin/master  //把HEAD指向最新下载的版本
 
+2、s
+
