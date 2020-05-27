@@ -14,6 +14,9 @@ ssh-keygen -t rsa -C "youremail@example.com"     SSH Key生成
 4、git最基本操作
 git init name        (初始化一个Git仓库)
 git add  文件名      (把文件添加到仓库，只是添加到暂存区)
+
+git diff --cached 查看add的内容，也是下次commit要提交的内容
+
 git commit -m "说明" (把文件提交到仓库) 
 git push origin master(把本地仓库推送到远程github仓库)
 说明:push之前需要先使用pull把本地代码更新到最新
@@ -22,6 +25,8 @@ git remote --v   查看git远程仓库地址
 git remote add crmservice git@192.168.14.12:kawork/crmservice.git
 git fetch crmservice master 拉取代码到本地，不合并
 git merge crmservice/master  合并代码
+
+
 
 5、误删重新拉取msster
 git checkout feature_hangzhou
